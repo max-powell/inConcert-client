@@ -1,0 +1,26 @@
+.header {
+  color: white;
+  background-color: black;
+  height: 15vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .header-item {
+    height: 60%;
+    margin: 2%;
+
+    &:first-child {
+      margin-right: auto;
+    }
+
+    img {
+      height: 100%
+    }
+
+    p {
+      font-size: x-large;
+      font-weight: bold;
+    }
+  }
+}
