@@ -1,10 +1,16 @@
 import React from 'react'
 
 import Header from './Header'
+import Footer from './Footer'
+import LandingPageBody from './LandingPageBody'
+
+import '../scss/LandingPage.scss'
 
 const LandingPage = () => (
-  <div>
+  <div className='layout'>
     <Header />
+    <LandingPageBody />
+    <Footer />
   </div>
 )
 
