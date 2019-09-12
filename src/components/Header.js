@@ -9,16 +9,16 @@ import '../scss/Header.scss'
 const Header = () => (
   <div className='header'>
     <div className='header-item'>
-      <img src={inConcertLogo} />
+      <img src={inConcertLogo} alt='inConcert logo' />
     </div>
     <div className='header-item'>
       <p>Powered by:</p>
     </div>
     <div className='header-item'>
-      <img src={spotifyLogo} />
+      <img src={spotifyLogo} alt='Spotify logo' />
     </div>
     <div className='header-item'>
-      <img src={songkickLogo} />
+      <img src={songkickLogo} alt='SongKick logo' />
     </div>
   </div>
 )
