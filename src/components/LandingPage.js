@@ -7,7 +7,7 @@ import LandingPageBody from './LandingPageBody'
 import '../scss/LandingPage.scss'
 
 const LandingPage = () => (
-  <div className='layout'>
+  <div className='login-layout'>
     <Header />
     <LandingPageBody />
     <Footer />
