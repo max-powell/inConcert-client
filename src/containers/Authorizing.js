@@ -12,7 +12,7 @@ class Authorizing extends Component {
   }
 
   componentDidMount () {
-    const query = new URLSearchParams(window.location.search)
+    const query = new URLSearchParams(this.props.location.search)
     if (query.has('error')) {
       return this.setState({
         error: true,
@@ -37,10 +37,12 @@ class Authorizing extends Component {
           loading: false
         })
       })
-      .catch(() => this.setState({
-        error: true,
-        loading:false
-      }))
+      .catch((e) => {
+        this.setState({
+          error: true,
+          loading: false
+        })
+      })
   }
 
   render() {
@@ -50,9 +52,7 @@ class Authorizing extends Component {
       return (
         <div>Loading...</div>
       )
-    }
-
-    if (error) {
+    } else if (error) {
       return (
         <Redirect
           to={{
@@ -63,18 +63,19 @@ class Authorizing extends Component {
           }}
         />
       )
+    } else {
+      return (
+        <Redirect
+          to={{
+            pathname: '/home',
+            state: {
+              access_token
+            }
+          }}
+          />
+      )
     }
 
-    return (
-      <Redirect
-        to={{
-          pathname: '/home',
-          state: {
-            access_token
-          }
-        }}
-      />
-    )
   }
 
 }
